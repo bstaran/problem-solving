@@ -1,22 +1,22 @@
 package q_폰켓몬;
 
-import java.util.ArrayList;
-import java.util.List;
+
+import com.sun.source.tree.NewArrayTree;
+
+import java.io.BufferedReader;
+import java.util.HashSet;
+
 
 public class Solution {
     public int solution(int[] nums) {
-        int answer = 0;
 
-        List<Integer> poketmonType = new ArrayList<>();
+        HashSet<Integer> poketmonType = new HashSet<>();
 
         for (int i = 0; i < nums.length; i++) {
-            if (!(poketmonType.contains(nums[i]))) poketmonType.add(nums[i]);
+            poketmonType.add(nums[i]);
         }
-//        System.out.println(poketmonType);
 
-        if (poketmonType.size() > nums.length / 2) answer = nums.length / 2;
-        else answer = poketmonType.size();
-        return answer;
+        return Math.min(poketmonType.size(), nums.length / 2);
     }
 
     public static void main(String[] args) {
