@@ -1,8 +1,7 @@
-package 숫자카드;
+package 숫자카드2;
 
 import java.io.*;
-import java.util.HashSet;
-import java.util.LinkedHashSet;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -10,21 +9,17 @@ public class Main {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         int N = Integer.parseInt(br.readLine());
-        HashSet<String> cardsN = new LinkedHashSet<>();
+        HashMap<String, Integer> cardsN = new HashMap<>();
         String[] cards = br.readLine().split(" ");
         for (int i = 0; i < N; i++) {
-            cardsN.add(cards[i]);
+            cardsN.put(cards[i], cardsN.getOrDefault(cards[i],0)+1);
         }
 
         int M = Integer.parseInt(br.readLine());
         String[] cards2 = br.readLine().split(" ");
-        HashSet<String> cardsM = new LinkedHashSet<>();
-        for (int i = 0; i < M; i++) {
-            cardsM.add(cards2[i]);
-        }
 
-        for (String s : cardsM) {
-            if (cardsN.contains(s)) bw.write("1 ");
+        for (int i = 0; i < M; i++) {
+            if (cardsN.containsKey(cards2[i])) bw.write(cardsN.get(cards2[i]) + " ");
             else bw.write("0 ");
         }
 
