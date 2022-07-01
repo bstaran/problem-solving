@@ -1,4 +1,4 @@
-package q4_reverseWord;
+package string.q4_reverseWord;
 
 import java.io.BufferedReader;
 import java.io.IOException;

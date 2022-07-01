@@ -1,4 +1,4 @@
-package q3_wordInSentence;
+package string.q3_wordInSentence;
 
 import java.io.BufferedReader;
 import java.io.IOException;

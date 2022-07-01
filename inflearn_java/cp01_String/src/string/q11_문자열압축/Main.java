@@ -1,4 +1,4 @@
-package q11_문자열압축;
+package string.q11_문자열압축;
 
 
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package q5_reverseSpecificCharactor;
+package string.q5_reverseSpecificCharactor;
 
 public class Main {
     public String solution(String word) {

@@ -1,4 +1,4 @@
-package q7_회문문자열;
+package string.q7_회문문자열;
 
 import java.io.BufferedReader;
 import java.io.IOException;

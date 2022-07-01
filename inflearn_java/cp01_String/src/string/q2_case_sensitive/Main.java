@@ -1,4 +1,4 @@
-package q2_case_sensitive;
+package string.q2_case_sensitive;
 
 import java.io.BufferedReader;
 import java.io.IOException;

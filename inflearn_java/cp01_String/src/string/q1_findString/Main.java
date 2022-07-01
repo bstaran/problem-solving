@@ -1,4 +1,4 @@
-package q1_findString;
+package string.q1_findString;
 
 import java.io.BufferedReader;
 import java.io.IOException;

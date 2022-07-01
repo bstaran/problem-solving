@@ -1,4 +1,4 @@
-package q10_가장짧은문자거리;
+package string.q10_가장짧은문자거리;
 
 import java.io.IOException;
 import java.util.Scanner;

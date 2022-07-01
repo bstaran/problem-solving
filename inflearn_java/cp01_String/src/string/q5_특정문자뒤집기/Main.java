@@ -1,4 +1,4 @@
-package q5_특정문자뒤집기;
+package string.q5_특정문자뒤집기;
 
 import java.io.BufferedReader;
 import java.io.IOException;
