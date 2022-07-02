@@ -6,15 +6,19 @@ import java.io.InputStreamReader;
 
 public class Main {
     public String solution(int n) {
-        String answer = "1 1";
+        StringBuilder answer = new StringBuilder("1 1 2");
 
-        int sum = 2;
+        int num1 = 2;
+        int num2 = 1;
         for (int i = 0; i < n-3; i++) {
-            sum = ((int)answer.charAt(answer.length() - 1)) + sum;
-            answer+=sum;
+            int sum = num1 + num2;
+            answer.append(" " + sum);
+            int temp = num1;
+            num1 = sum;
+            num2 = temp;
         }
         
-        return answer;
+        return answer.toString();
     }
 
     public static void main(String[] args) throws IOException {
