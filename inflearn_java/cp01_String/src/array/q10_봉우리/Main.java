@@ -3,7 +3,6 @@ package array.q10_봉우리;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
 public class Main {
     public int solution(int[][] arrays, int n) {
@@ -17,7 +16,27 @@ public class Main {
         return answer;
     }
 
-
+//    public int solution(int[][] arrays, int n) {
+//        int[] dx = {-1, 0, 1, 0};
+//        int[] dy = {0, 1, 0, -1};
+//
+//        int answer = 0;
+//        for (int i = 0; i < n; i++) {
+//            for (int j = 0; j < n; j++) {
+//                boolean flag = true;
+//                for (int k = 0; k < 4; k++) {
+//                    int nx = i + dx[k];
+//                    int ny = j + dy[k];
+//                    if (nx >= 0 && nx < n && ny >= 0 && ny < n && arrays[nx][ny] >= arrays[i][j]) {
+//                        flag = false;
+//                        break;
+//                    }
+//                }
+//                if (flag) answer++;
+//            }
+//        }
+//        return answer;
+//    }
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
