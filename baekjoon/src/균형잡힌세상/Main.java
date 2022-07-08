@@ -8,7 +8,6 @@ import java.util.Stack;
 public class Main {
     public String solution(String s) {
 
-        // 왜 틀렸는지 못찾아서 보류..
         Stack<Character> stack = new Stack<>();
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
