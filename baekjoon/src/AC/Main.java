@@ -27,12 +27,15 @@ public class Main {
         }
         StringBuilder sb = new StringBuilder();
         sb.append("[");
-        if (isRight) while (!(dq.isEmpty())) sb.append(dq.pollLast()).append(",");
-        else while (!(dq.isEmpty())) sb.append(dq.pollFirst()).append(",");
-        sb.delete(sb.length() - 1, sb.length());
+        if (!dq.isEmpty()) sb.append(isRight ? dq.pollLast() : dq.pollFirst());
+        if (isRight) while (!(dq.isEmpty())) sb.append(",").append(dq.pollLast());
+        else while (!(dq.isEmpty())) sb.append(",").append(dq.pollFirst());
         sb.append("]");
         return sb.toString();
     }
+
+    // 무조건 숫자, 이런식으로 넣은 다음에 마지막 반점을 빼주신거고
+    // 숫자 하나 넣고 그 뒤에 들어가는것들을 ,숫자 이런식으로 넣는거죠
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

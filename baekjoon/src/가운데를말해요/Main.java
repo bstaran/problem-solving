@@ -13,10 +13,17 @@ public class Main {
 
         PriorityQueue<Integer> beforeQ = new PriorityQueue<>(Collections.reverseOrder());
         PriorityQueue<Integer> afterQ = new PriorityQueue<>();
-        for (int i = 0; i < n; i++) {
+        beforeQ.offer(Integer.parseInt(br.readLine()));
+        bw.write(String.valueOf(beforeQ.peek()));
+        bw.newLine();
+        for (int i = 1; i < n; i++) {
             int input = Integer.parseInt(br.readLine());
-            if (beforeQ.size() == afterQ.size()) beforeQ.offer(input);
-            else {
+            if (beforeQ.size() == afterQ.size()) {
+                if (afterQ.peek() < input) {
+                    beforeQ.offer(afterQ.poll());
+                    afterQ.offer(input);
+                } else beforeQ.offer(input);
+            } else {
                 if (beforeQ.peek() > input) {
                     afterQ.offer(beforeQ.poll());
                     beforeQ.offer(input);
@@ -24,7 +31,7 @@ public class Main {
             }
 
             bw.write(String.valueOf(beforeQ.peek()));
-            if (i!=n-1) bw.newLine();
+            if (i != n - 1) bw.newLine();
         }
 
         bw.flush();
