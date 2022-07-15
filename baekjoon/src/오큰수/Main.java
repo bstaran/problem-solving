@@ -25,6 +25,7 @@ public class Main {
                 }
                 stack.push(i);
             }
+            if (i == N - 1) while (!(stack.isEmpty())) arr[stack.pop()] = -1;
         }
         arr[arr.length - 1] = -1;
         for (int n : arr) bw.write(n + " ");

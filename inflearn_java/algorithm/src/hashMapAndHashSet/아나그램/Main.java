@@ -1,6 +1,7 @@
 package hashMapAndHashSet.아나그램;
 
 import java.util.HashMap;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
@@ -12,7 +13,7 @@ public class Main {
         for (char c : s.toCharArray()) hashMap.put(c, hashMap.getOrDefault(c, 0) + 1);
         for (char c : s2.toCharArray()) hashMap2.put(c, hashMap2.getOrDefault(c, 0) + 1);
 
-        for (char c : s.toCharArray()) if (hashMap.get(c)!=hashMap2.getOrDefault(c, -1)) return "NO";
+        for (char c : s.toCharArray()) if (!Objects.equals(hashMap.get(c), hashMap2.get(c))) return "NO";
 
         return "YES";
     }
