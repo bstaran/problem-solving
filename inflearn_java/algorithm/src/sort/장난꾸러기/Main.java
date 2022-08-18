@@ -18,9 +18,7 @@ public class Main {
             arr[i] = Integer.parseInt(st.nextToken());
         }
 
-        int c=0,mate=0;
-
-
+//        int c=0,mate=0;
 //        for (int i = 0; i < N; i++) {
 //            if (i > 0 && arr[i] < arr[i-1]) mate = i+1;
 //            if(i < N-1 && c == 0 && arr[i] > arr[i+1]) {
