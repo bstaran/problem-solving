@@ -12,11 +12,12 @@ public class Main {
 
     public static void dfs(int l, int sum) {
 
-        if (sum<c) answer = Math.max(sum, answer);
-        if (l==arr.length) return;
-
-        dfs(l+1, sum+arr[l]);
-        dfs(l+1, sum);
+        if (sum > c) return;
+        if (l==arr.length) answer = Math.max(sum, answer);
+        else {
+            dfs(l + 1, sum + arr[l]);
+            dfs(l + 1, sum);
+        }
     }
 
     public static void main(String[] args) throws IOException {
