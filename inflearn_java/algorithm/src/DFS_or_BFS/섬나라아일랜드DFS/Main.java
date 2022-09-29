@@ -1,4 +1,4 @@
-package DFS_or_BFS.섬나라아일랜드;
+package DFS_or_BFS.섬나라아일랜드DFS;
 
 import java.io.BufferedReader;
 import java.io.IOException;
