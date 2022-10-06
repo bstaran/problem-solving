@@ -2,8 +2,13 @@ package greedy.disjointSet;
 
 public class Main {
     public static void union(int[] nodes, int a, int b) {
-        if (a > b) nodes[a] = b;
-        else  nodes[b] = a;
+        a = find(nodes, a);
+        b = find(nodes, b);
+
+//        // root 최소값
+//        if (a > b) nodes[a] = b;
+//        else nodes[b] = a;
+        if (a!=b) nodes[a]=b;
     }
 
     public static int find(int[] nodes, int node) {
