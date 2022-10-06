@@ -82,17 +82,3 @@ public class Main {
     }
 }
 
-class Edge implements Comparable<Edge> {
-    int vertex;
-    int cost;
-
-    public Edge(int vertex, int cost) {
-        this.vertex = vertex;
-        this.cost = cost;
-    }
-
-    @Override
-    public int compareTo(Edge o) {
-        return this.cost - o.cost;
-    }
-}
