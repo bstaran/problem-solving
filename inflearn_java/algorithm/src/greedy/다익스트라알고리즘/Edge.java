@@ -9,6 +9,14 @@ public class Edge implements Comparable<Edge> {
         this.cost = cost;
     }
 
+    public int getVertex() {
+        return vertex;
+    }
+
+    public int getCost() {
+        return cost;
+    }
+
     @Override
     public int compareTo(Edge o) {
         return this.cost - o.cost;
