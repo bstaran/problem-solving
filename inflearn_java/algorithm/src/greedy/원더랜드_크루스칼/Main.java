@@ -1,4 +1,4 @@
-package greedy.원더랜드;
+package greedy.원더랜드_크루스칼;
 
 
 import java.io.BufferedReader;
