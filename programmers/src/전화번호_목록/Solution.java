@@ -8,12 +8,11 @@ public class Solution {
 
         HashMap<String, Integer> map = new HashMap<>();
 
-        for (int i = 0; i < phone_book.length; i++)
-            map.put(phone_book[i], 0);
+        for (String s : phone_book) map.put(s, 0);
 
-        for (int i = 0; i < phone_book.length; i++) {
-            for (int j = 0; j < phone_book[i].length(); j++) {
-                if (map.containsKey(phone_book[i].substring(0, j))) return false;
+        for (String s : phone_book) {
+            for (int j = 0; j < s.length(); j++) {
+                if (map.containsKey(s.substring(0, j))) return false;
             }
         }
 
