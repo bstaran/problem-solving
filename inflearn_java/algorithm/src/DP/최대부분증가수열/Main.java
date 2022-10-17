@@ -18,7 +18,7 @@ public class Main {
             arr[i] = Integer.parseInt(st.nextToken());
         }
 
-        arr[0]=1;
+        dy[0]=1;
 
         int answer=0;
 
