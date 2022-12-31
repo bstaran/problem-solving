@@ -89,6 +89,7 @@ fabric.properties
 *.iml
 modules.xml
 .idea/misc.xml
+.idea
 *.ipr
 misc.xml
 
@@ -150,5 +151,7 @@ Temporary Items
 ### macOS Patch ###
 # iCloud generated files
 *.icloud
+
+.vscode
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,intellij
