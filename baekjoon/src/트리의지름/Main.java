@@ -11,7 +11,7 @@ public class Main {
     static ArrayList<ArrayList<Node>> tree;
     static boolean[] visited;
     static int max = 0;
-    static int node;
+    static int endNode;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -39,7 +39,7 @@ public class Main {
         dfs(1, 0);
 
         visited = new boolean[V + 1];
-        dfs(node, 0);
+        dfs(endNode, 0);
 
         System.out.println(max);
 
@@ -48,7 +48,7 @@ public class Main {
     static void dfs(int vertex, int cost) {
         if (cost > max) {
             max = cost;
-            node = vertex;
+            endNode = vertex;
         }
 
         visited[vertex] = true;
@@ -58,7 +58,6 @@ public class Main {
 
             if (!visited[nd.vertex]) {
                 dfs(nd.vertex, nd.edgeCost + cost);
-                visited[nd.vertex] = true;
             }
         }
     }
