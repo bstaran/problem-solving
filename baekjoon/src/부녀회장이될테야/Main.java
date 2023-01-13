@@ -17,15 +17,25 @@ public class Main {
             for (int j = 1; j <= n; j++) {
                 dp[0][j] = j;
             }
+//            for (int j = 1; j <= k; j++) {
+//                for (int l = 1; l <= n; l++) {
+//                    for (int m = 1; m <= l; m++) {
+//                        dp[j][l] += dp[j-1][m];
+//                    }
+//                }
+//            }
             for (int j = 1; j <= k; j++) {
                 for (int l = 1; l <= n; l++) {
-                    for (int m = 1; m <= l; m++) {
-                        dp[j][l] += dp[j-1][m];
-                    }
+                    dp[j][l] = dp[j][l-1] + dp[j-1][l];
                 }
             }
-            System.out.println(dp[k][n]);
+
+
+            bw.write(dp[k][n] + "\n");
         }
+        bw.flush();
+        bw.close();
+        br.close();
 
     }
 }
