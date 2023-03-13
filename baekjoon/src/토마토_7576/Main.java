@@ -1,4 +1,4 @@
-package 토마토;
+package 토마토_7576;
 
 import java.io.BufferedReader;
 import java.io.IOException;
