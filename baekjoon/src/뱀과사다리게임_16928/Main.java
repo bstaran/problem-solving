@@ -3,17 +3,12 @@ package 뱀과사다리게임_16928;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class Main {
 
     static HashMap<Integer, Integer> ladder = new HashMap<>();
     static HashMap<Integer, Integer> snake = new HashMap<>();
-    static boolean[] visit = new boolean[101];
-    static int answer;
     private static int[] board;
 
     public static void main(String[] args) throws IOException {
@@ -33,7 +28,6 @@ public class Main {
         }
 
         board = new int[101];
-        answer = Integer.MAX_VALUE;
 
         bfs();
 
@@ -68,8 +62,7 @@ public class Main {
                     nextStep = snake.get(nextStep);
                 }
 
-                if (!visit[nextStep]) {
-                    visit[nextStep] = true;
+                if (board[nextStep] == 0) {
                     board[nextStep] = board[num] + 1;
                     q.add(nextStep);
                 }
