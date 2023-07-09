@@ -1,4 +1,4 @@
-package 균형잡힌세상;
+package 균형잡힌세상_4949;
 
 import java.io.BufferedReader;
 import java.io.IOException;
