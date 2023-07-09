@@ -1,4 +1,4 @@
-package 랜선자르기;
+package 랜선자르기_1654;
 
 import java.io.*;
 import java.util.StringTokenizer;
