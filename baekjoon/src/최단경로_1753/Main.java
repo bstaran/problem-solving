@@ -1,4 +1,4 @@
-package 최단경로;
+package 최단경로_1753;
 
 import java.io.BufferedReader;
 import java.io.IOException;
