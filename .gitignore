@@ -152,9 +152,12 @@ Temporary Items
 # iCloud generated files
 *.icloud
 
-.vscode
-
 # End of https://www.toptal.com/developers/gitignore/api/macos,intellij
-/baekjoon/.idea/
-/inflearn_java/.idea/
-/.vscode/
+.idea/
+.vscode/
+.gradle/
+gradle/
+/leetcode/build.gradle
+/leetcode/gradlew
+/leetcode/gradlew.bat
+/leetcode/settings.gradle
